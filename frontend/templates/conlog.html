@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/logo.ico') }}">
+
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/assets/css/login.css">
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="box-form">
+        <div class="left" style="background-image: url('static/assets/images/logpageimg.jpg');">
+            <div class="overlay">
+                <h1>BCA</h1>
+                <p>BCA department admin login for student management system.</p>
+            </div>
+        </div>
+
+
+        <div class="right">
+            <form id="adminLogin" method="post">
+                <h5>Login</h5>
+                <p>Enter your valid username and password for login into admin page.</p>
+                <div class="inputs">
+                    <input type="text" name="username" id="username" placeholder="username" autocomplete="off" required>
+                    <br>
+                    <input type="password" name="password" id="password" placeholder="password" autocomplete="off"
+                        required>
+                </div>
+
+                <br><br>
+
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <a hidden id="adminClick" href="{{ url_for('mess') }}"></a>
+        </div>
+
+    </div>
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script>
+        // validation //
+        $("#adminLogin").validate({
+            rules: {
+                username: "required",
+                password: "required"
+            },
+            messages: {
+                username: "Enter the Userame",
+                password: "Enter the Password",
+            },
+            errorPlacement: function (error, element) {
+
+                error.insertAfter(element);
+
+            },
+            submitHandler: function (form) {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://127.0.0.1:5000/admin',
+                    crossDomain: true,
+                    contentType: 'application/json',
+                    dataType: "json",
+                    headers: {
+                        'Accept': 'application/json',
+                        'Access-Control-Request-Headers': 'x-requested-with',
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Headers': 'x-requested-with',
+                        'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+                    },
+                    data: JSON.stringify({
+                        username: $("#username").val(),
+                        password: $("#password").val(),
+                    }),
+                    success: function () {
+                        $('#adminClick')[0].click();
+                    },
+                    error: function (jqXHR, exception) {
+                        console.log("Came into Error:::", exception);
+                    }
+                })
+
+            }
+        })
+    </script>
+
+
+</body>
+
+</html>

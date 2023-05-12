@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <title>The New College-BCA</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/logo.ico') }}">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="static/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="static/assets/css/templatemo-grad-school.css">
+  <link rel="stylesheet" href="static/assets/css/owl.css">
+  <link rel="stylesheet" href="static/assets/css/lightbox.css">
+  <link rel="stylesheet" href="static/assets/css/stuform.css">
+
+  <style>
+    .error {
+      color: red;
+    }
+  </style>
+  <!--
+    
+TemplateMo 557 Grad School
+
+https://templatemo.com/tm-557-grad-school
+
+-->
+</head>
+
+<body>
+
+
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="https://thenewcollege.edu.in/" target="_blank"><em>THE NEW</em> COLLEGE</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Home</a></li>
+        <li class="has-submenu"><a href="#section2">About Us</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Who we are?</a></li>
+            <li><a href="#section3">What we do?</a></li>
+          </ul>
+        </li>
+        <li><a href="#section4">Student Form</a></li>
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li><a href="#section6">Contact</a></li>
+        <li class="has-submenu"><a href="{{ url_for('login') }}">Admin</a>
+          <ul class="sub-menu">
+            <li><a href="{{ url_for('login') }}">Student Table</a></li>
+            <li><a href="{{ url_for('message') }}">View Messages</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+    <video autoplay muted loop id="bg-video">
+      <source src="static/assets/images/tnc_vid.mp4" type="video/mp4" />
+    </video>
+
+    <div class="video-overlay header-text">
+      <div class="caption">
+        <h6>STUDENT MANAGEMENT SYSTEM</h6>
+        <h2>Bachelors of <br><em> COMPUTER APPLICATIONS</em></h2>
+        <div class="main-button">
+          <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-pencil"></i>BCA-Course</h4>
+              </div>
+              <div class="content-hide">
+                <p>Bachelor of Computer Applications is a 3-year (6 semesters) programme for undergraduates seeking
+                  career in the IT industry. The degree is awarded for completing the programme in the study fields of
+                  software testing, web design, software development.</p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
+                  posuere imperdiet.</p>
+                <!-- <div class="scroll-to-section"><a href="#section2">More Info.</a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-graduation-cap"></i>AMENITIES</h4>
+              </div>
+              <div class="content-hide">
+                <p>In our department we have 2 programming labs, 6 lecture halls with projector facilities, auditorium
+                  for department culturals and Placement hall for campus interviews.There are 12 teaching staffs and 2
+                  lab assistants for lab maintainance. </p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
+                  posuere imperdiet.</p>
+                <!-- <div class="scroll-to-section"><a href="#section3">Details</a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>Achievements</h4>
+              </div>
+              <div class="content-hide">
+                <p>Top 1st department in shift 2. <br> Each year more than 30 students getting placement in top
+                  companies through campus interviews.<br>Achieved a A++ grade in National Assessment And Accrediation
+                  Council(NAAC).</p>
+                <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
+                  posuere imperdiet.</p>
+                <!-- <div class="scroll-to-section"><a href="#section4">Read More</a></div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Why choose Computer Applications?</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id='tabs'>
+            <ul>
+              <li><a href='#tabs-1'>Best Education</a></li>
+              <li><a href='#tabs-2'>Top Management</a></li>
+              <li><a href='#tabs-3'>Quality Meeting</a></li>
+            </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="static/assets/images/class.png" alt=""
+                      style="width: 516px; margin-left: 2.3%; height: 77%; margin-top: 3%; ">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Best Education</h4>
+                    <p>We providing a best education by highly experienced professors and high level lab facilities.The
+                      syllabus was determined by current IT needs makes the students to be in trend of learning.We
+                      invite lots of experts from different fields to interact with the students for improving student
+                      knowledge.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-2'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="static/assets/images/dept.png" alt=""
+                      style="width: 516px; margin-left: 2.3%; height: 77%; margin-top: 3.7%; ">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Top Level</h4>
+                    <p>All the Environmental resources managements and Student needs are managed by Head of the
+                      department and college authorities. A gendral secratory will be on students side for helping with
+                      student needs.</p>
+                    <p>High level resources maintainance and Providing a comfortable environment for students for
+                      learning is our priority.</p>
+                  </div>
+                </div>
+              </article>
+              <article id='tabs-3'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="static/assets/images/mit.png" alt=""
+                      style="width: 516px; margin-left: 2.3%; height: 77%; margin-top: 2.8%;">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Quality Meeting</h4>
+                    <p>In our BCA department there will be quality meeting conducted on each week to review the
+                      performance of products and services of our department. <br>
+                      To audit the performance of the products of the students to ensure that they following thier right
+                      carrier path and goals.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id='tabs'>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="static/assets/images/lab.png" alt=""
+                      style="width: 516px; margin-left: 2.3%; height: 88%; margin-top: 2.8%;">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Computer Tech</h4>
+                    <p>In BCA we students learn about advanced computer technologies and programming in multiple
+                      languages, devoloping a Web
+                      applications and Mobile applications.This imparts student knowledge of basic computer skills and
+                      software development.It is usually the first step into the world of information technology.</p>
+                  </div>
+                </div>
+              </article>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <hr>
+  </section>
+
+  <section class="section courses" data-section="section4">
+    <div class="bodi">
+      <div class="contain">
+        <div class="title">Student Form</div>
+        <div class="cont">
+          <form method="post" id="student_form">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" name="firstname" id="firstname" placeholder="Enter your first name"
+                  autocomplete="off" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" name="lastname" id="lastname" placeholder="Enter your last name" autocomplete="off"
+                  required>
+              </div>
+              <div class="input-box">
+                <span class="details">Reg No</span>
+                <input type="text" name="regno" id="regno" placeholder="Enter your register number" maxlength="13"
+                  autocomplete="off" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="email" name="mail_id" id="mail_id" placeholder="Enter your email" autocomplete="off"
+                  required>
+              </div>
+              <div class="input-box">
+                <span class="details">Batch From</span>
+                <input type="text" name="batch_from" id="batch_from" list="fyears" placeholder="Enter your started year"
+                  required>
+                <datalist id="fyears">
+                  <option value="2020">
+                  <option value="2021">
+                  <option value="2022">
+                  <option value="2023">
+                </datalist>
+              </div>
+              <div class="input-box">
+                <span class="details">Batch To</span>
+                <input type="text" name="batch_to" id="batch_to" list="tyears" placeholder="Enter your finishing year"
+                  required>
+                <datalist id="tyears">
+                  <option value="2022">
+                  <option value="2023">
+                  <option value="2024">
+                  <option value="2025">
+                </datalist>
+              </div>
+              <div class="input-box">
+                <span class="details">Contact</span>
+                <input type="tel" name="phonenumber" id="phonenumber" placeholder="Enter your phone number"
+                  maxlength="10" autocomplete="off" required>
+              </div>
+            </div>
+            <div class="button">
+              <input id="formSubmit" type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="section video" data-section="section5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center">
+          <div class="left-content">
+            <span>our presentation is for you</span>
+            <h4>Watch the video to learn more <em>about Grad School</em></h4>
+            <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. You may <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> for details.
+            <br><br>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+            <div class="main-button"><a rel="nofollow" href="https://fb.com/templatemo" target="_parent">External URL</a></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <article class="video-item">
+            <div class="video-caption">
+              <h4>Power HTML Template</h4>
+            </div>
+            <figure>
+              <a href="https://www.youtube.com/watch?v=r9LtOG6pNUw" class="play"><img src="static/assets/images/main-thumb.png"></a>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section contact" data-section="section6">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <hr>
+            <h2>Let’s Keep In Touch</h2>
+          </div>
+        </div>
+        <div class="col-md-6">
+
+          <!-- Do you need a working HTML contact-form script?
+                	
+                    Please visit https://templatemo.com/contact page -->
+
+          <form id="contact" method="post">
+            <div class="row">
+              <div class="col-md-6">
+                <fieldset>
+                  <input name="name" type="text" class="form-control" id="name" placeholder="Your Name"
+                    autocomplete="off" required="">
+                </fieldset>
+              </div>
+              <div class="col-md-6">
+                <fieldset>
+                  <input name="email" type="text" class="form-control" id="email" placeholder="Your Email"
+                    autocomplete="off" required="">
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..."
+                    autocomplete="off" required=""></textarea>
+                </fieldset>
+              </div>
+              <div class="col-md-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="button">Send Message Now</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.709191196678!2d80.25682961448452!3d13.054173616593863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52663bfa1ace61%3A0x60bb479a340ce102!2sThe%20New%20College!5e0!3m2!1sen!2sin!4v1677859600012!5m2!1sen!2sin"
+              width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p>This Student Management System Project is devoloped by - ABDUL NIZAR</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="static/assets/js/isotope.min.js"></script>
+  <script src="static/assets/js/owl-carousel.js"></script>
+  <script src="static/assets/js/lightbox.js"></script>
+  <script src="static/assets/js/tabs.js"></script>
+  <script src="static/assets/js/video.js"></script>
+  <script src="static/assets/js/slick-slider.js"></script>
+  <script src="static/assets/js/custom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+  <script>
+    //according to loftblog tut
+    $('.nav li:first').addClass('active');
+
+    var showSection = function showSection(section, isAnimate) {
+      var
+        direction = section.replace(/#/, ''),
+        reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+        reqSectionPos = reqSection.offset().top - 0;
+
+      if (isAnimate) {
+        $('body, html').animate({
+          scrollTop: reqSectionPos
+        },
+          800);
+      } else {
+        $('body, html').scrollTop(reqSectionPos);
+      }
+
+    };
+
+    var checkSection = function checkSection() {
+      $('.section').each(function () {
+        var
+          $this = $(this),
+          topEdge = $this.offset().top - 80,
+          bottomEdge = topEdge + $this.height(),
+          wScroll = $(window).scrollTop();
+        if (topEdge < wScroll && bottomEdge > wScroll) {
+          var
+            currentId = $this.data('section'),
+            reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+          reqLink.closest('li').addClass('active').
+            siblings().removeClass('active');
+        }
+      });
+    };
+
+    $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+      if ($(e.target).hasClass('external')) {
+        return;
+      }
+      $('#menu').removeClass('active');
+      showSection($(this).attr('href'), true);
+    });
+
+    $(window).scroll(function () {
+      checkSection();
+    });
+
+    // validation part //
+
+    $("#student_form").validate({
+      rules: {
+        firstname: "required",
+        lastname: "required",
+        regno: "required",
+        batch_from: "required",
+        batch_to: "required",
+        mail_id: "required",
+        phonenumber: "required"
+      },
+      messages: {
+        firstname: "Enter the First Name",
+        lastname: "Enter the Last Name",
+        regno: "Enter the Register Number",
+        batch_from: "Enter the Batch From",
+        batch_to: "Enter the Batch To",
+        mail_id: "Enter the valid Email",
+        phonenumber: "Enter the Contact Number"
+      },
+      errorPlacement: function (error, element) {
+
+        error.insertAfter(element);
+
+      },
+      submitHandler: function (form) {
+        console.log("came into form submit");
+        $.ajax({
+          type: 'POST',
+          url: 'http://127.0.0.1:5000/insert',
+          crossDomain: true,
+          contentType: 'application/json',
+          dataType: "json",
+          headers: {
+            'Accept': 'application/json',
+            'Access-Control-Request-Headers': 'x-requested-with',
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers': 'x-requested-with',
+            'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+          },
+          data: JSON.stringify({
+            firstname: $("#firstname").val(),
+            lastname: $("#lastname").val(),
+            regno: $("#regno").val(),
+            batch_from: $("#batch_from").val(),
+            batch_to: $("#batch_to").val(),
+            mail_id: $("#mail_id").val(),
+            phonenumber: $("#phonenumber").val()
+          }),
+          success: function (response) {
+            if (response.statusCode === 200) {
+              alert(response.message);
+              window.location.reload();
+            }
+          },
+          error: function (jqXHR, exception) {
+            console.log("Came into Error:::", exception);
+          }
+        })
+      }
+    });
+
+
+
+
+    $('#contact').submit(function (e) {
+      e.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: 'http://127.0.0.1:5000/contact',
+        crossDomain: true,
+        contentType: 'application/json',
+        dataType: "json",
+        headers: {
+          'Accept': 'application/json',
+          'Access-Control-Request-Headers': 'x-requested-with',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'x-requested-with',
+          'Access-Control-Allow-Methods': 'POST, GET, OPTIONS'
+        },
+        data: JSON.stringify({
+          name: $("#name").val(),
+          mail_id: $("#email").val(),
+          message: $("#message").val(),
+        }),
+        success: function (response) {
+          if (response.statusCode === 200) {
+              alert(response.message);
+          window.location.reload();}
+        },
+        error: function (jqXHR, exception) {
+          console.log("Came into Error:::", exception);
+        }
+      })
+    });
+
+  </script>
+</body>
+
+</html>

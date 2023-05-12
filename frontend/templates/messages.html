@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Student Data Table</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/css/admin.css">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='assets/images/logo.ico') }}">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container-xl" style="max-width: 1300px;">
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <h2><b>STUDENT FEEDBACKS</b></h2>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="search-box">
+                                <a href="{{ url_for('frontend') }}" type="text" title="Logout"
+                                    style="font-family: 'Material Icons'; font-size: 24px; margin-left: 90%;">&#xe9ba;</a>
+
+                                <i class="material-icons" style="top: 11px;">&#xE8B6;</i>
+                                <input type="text" name="search" id="search" class="form-control"
+                                    placeholder="Search&hellip;" style="margin-left: -121%; margin-top: -14%;">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-striped table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name <!--<i class="fa fa-sort"></i>--></th>
+                            <th>Email</th>
+                            <th style="width: 40%;">Message</th>
+                            <th>Recieved at</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in messages %}
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.name}}</td>
+                            <td>{{row.mail_id}}</td>
+                            <td>{{row.message}}</td>
+                            <td>{{row.recieved_at}}</td>
+                        </tr>
+                        {% endfor %}
+
+                        {% for row in search_mess %}
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.name}}</td>
+                            <td>{{row.mail_id}}</td>
+                            <td>{{row.message}}</td>
+                            <td>{{row.recieved_at}}</td>
+                        </tr>
+                        {% endfor %}
+
+                    </tbody>
+                </table>
+                <!-- pagination -->
+                <!-- <div class="clearfix">
+                <div class="hint-text">Showing <b>10</b> out of <b>50</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>       -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#search').keypress(function () {
+            setTimeout(el => {
+                var searchValue = this.value;
+                console.log("searchValue:::", searchValue);
+                window.location.href = 'http://127.0.0.1:5001/messages/search?search=' + searchValue;
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>
