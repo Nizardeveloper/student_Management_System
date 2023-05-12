@@ -1,7 +1,7 @@
 # student_Management_System
 Student Management System project using html,css and Python(flask) and MySQL databse. 
 
-This Student Mangement System project is devoped under three tier architecture in python(flask) framewok.
+This Student Mangement System project is devoloped under three tier architecture in python(flask) framewok.
 this is CRUD project.
 
 Features:
